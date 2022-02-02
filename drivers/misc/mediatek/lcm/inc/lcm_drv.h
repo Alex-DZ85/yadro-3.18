@@ -885,4 +885,14 @@ int lcm_vgp_supply_enable(void);
 int lcm_vgp_supply_disable(void);
 extern LCM_DSI_MODE_CON lcm_dsi_mode;
 
+/* begin, prize-lifenfen-20181206, add for lcm gpio pinctl control */
+#define LCM_RESET_PIN_NO         0
+#define LCM_POWER_DP_NO          1             //2.8V
+#define LCM_POWER_DM_NO          2             //1.8V
+#define LCM_POWER_ENP_NO         3
+#define LCM_POWER_ENN_NO         4
+
+int mt_dsi_pinctrl_set(unsigned int pin , unsigned int level);
+/* end, prize-lifenfen-20181206, add for lcm gpio pinctl control */
+
 #endif /* __LCM_DRV_H__ */
